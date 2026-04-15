@@ -1,4 +1,4 @@
-package com.uansari.quickshop.ui.theme
+package com.uansari.quickshop.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
