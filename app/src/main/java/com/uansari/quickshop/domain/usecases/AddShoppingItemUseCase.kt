@@ -11,7 +11,7 @@ class AddShoppingItemUseCase @Inject constructor(
         if (shoppingItemName.isBlank()) return
         shoppingRepository.addShoppingItem(
             ShoppingItem(
-                name = shoppingItemName,
+                name = shoppingItemName.trim(),
                 createdAt = System.currentTimeMillis(),
             )
         )

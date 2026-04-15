@@ -8,7 +8,6 @@ interface ShoppingRepository {
     suspend fun addShoppingItem(shoppingItem: ShoppingItem)
     suspend fun deleteShoppingItem(shoppingItem: ShoppingItem)
 
-//    suspend fun toggleShoppingItem(id: Int)
-
-//    suspend fun clearCompletedShoppingItem()
+    suspend fun toggleShoppingItem(shoppingItem: ShoppingItem)
+    suspend fun clearCompletedShoppingItem()
 }

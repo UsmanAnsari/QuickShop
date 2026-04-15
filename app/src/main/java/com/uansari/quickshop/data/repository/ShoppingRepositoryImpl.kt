@@ -26,14 +26,13 @@ class ShoppingRepositoryImpl @Inject constructor(
         shoppingDao.deleteShoppingItem(shoppingItem.toEntity())
     }
 
-    /*
-        override suspend fun toggleShoppingItem(id: Int) {
-            TODO("Not yet implemented")
-        }
-    override suspend fun clearCompletedShoppingItem() {
-            TODO("Not yet implemented")
+    override suspend fun toggleShoppingItem(shoppingItem: ShoppingItem) {
+        shoppingDao.updateShoppingItem(shoppingItem.toEntity())
     }
-    */
+
+    override suspend fun clearCompletedShoppingItem() {
+        shoppingDao.clearAllShoppingItems()
+    }
 
 
     private fun ShoppingItemEntity.toDomain(): ShoppingItem {
